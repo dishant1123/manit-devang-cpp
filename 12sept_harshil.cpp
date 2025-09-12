@@ -10,6 +10,7 @@ polimorpshism :  many forms of same function .
 
 */
 // function  overloading  : 
+/*
 #include<iostream>
 using namespace std;
 class calculator
@@ -35,5 +36,50 @@ int main()
     cout<<c1.add(90,12)<<endl; 
     cout<<c1.add(1,2,3)<<endl;
     cout<<c1.add(1,2,3,4)<<endl;
+    return 0;
+}
+*/
+
+// operator  overloading  : 
+/*
+operator  : + - * / %  < > <= >= == != 
+*/
+#include<iostream>
+using namespace std;
+class calculator
+{
+    public : 
+        int num1 ; 
+
+    calculator(int num1)
+    {
+        this->num1=num1;
+    }
+    calculator operator+(const calculator &c1)
+    {
+        return calculator(num1+c1.num1);
+    }
+    calculator operator-(const calculator &c1)
+    {
+        return calculator(num1-c1.num1);
+    }
+    calculator operator*(const calculator &c1)
+    {
+        return calculator(num1*c1.num1);
+    }
+    void display()
+    {
+        cout<<"num1 : "<<num1<<endl;
+    }
+};
+int main()
+{
+    calculator c1(10),c2(20); 
+    calculator result =c1+c2;
+    calculator result1 =c1-c2;
+    calculator result2 =c1*c2;
+    cout<<"addition :";result.display();
+    cout<<"diff :";result1.display();
+    cout<<"mul :";result2.display();
     return 0;
 }
