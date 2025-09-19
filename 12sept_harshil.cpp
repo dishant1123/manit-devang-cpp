@@ -55,7 +55,7 @@ class calculator
     {
         this->num1=num1;
     }
-    calculator operator+(const calculator &c1)
+    calculator operator+(const calculator &c1)  // calculator operator *(const class name , obj)
     {
         return calculator(num1+c1.num1);
     }
