@@ -11,10 +11,15 @@ ofstream ==>writing to file
 ifstream ==> reading from file
 fstream ==> both reading and writing to file
 
+
+ios :: out ==> write  mode 
+ios :: in ==> read mode
+ios :: app ==> append mode
 */
 
 // write  to file  : 
 
+/*
 #include <iostream>
 #include <fstream>  // new  header file  
 using namespace std;
@@ -27,12 +32,60 @@ int main()
         cout<<"file not found"<<endl;
         return 0;
     }
-    fout<<"hello prince.\n"<<endl;
-    fout<<"live in ahmedabad.\n"<<endl;
-    fout<<"food lover.\n"<<endl;
-    fout<<"garba lover.\n "<<endl;
+    fout<<"hello prince."<<endl;
+    fout<<"live in ahmedabad."<<endl;
+    fout<<"food lover."<<endl;
+    fout<<"garba lover."<<endl;
     cout<<"file written successfully"<<endl;
     fout.close();
     return 0;
 
+}
+*/
+
+// read from  file  : 
+/*
+#include <iostream>
+#include <fstream>  // new  header file
+#include <string>  
+using namespace std;
+
+int main()
+{
+    string  s1; 
+    ifstream fout("prince.txt");
+
+    if(!fout)
+    {
+        cout<<"file not found"<<endl;
+        return 0;
+    }
+    while (getline(fout,s1))
+    {
+        cout<<s1<<endl;
+    }
+    fout.close();
+    return 0;
+}
+*/
+
+// append to file :
+
+#include <iostream>
+#include <fstream>  // new  header file
+using namespace std;
+int main()
+{
+    fstream fout("prince.txt",ios::app);
+ 
+    if(!fout)
+    {
+        cout<<"file not found"<<endl;
+        return 0;
+    }
+    fout<<"born in palanpur."<<endl;
+    fout<<"study in sabermati clg."<<endl;
+    cout<<"file appended successfully"<<endl;
+    fout.close();
+    return 0; 
 }
