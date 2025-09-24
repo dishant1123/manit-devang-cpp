@@ -18,7 +18,6 @@ ios :: app ==> append mode
 */
 
 // write  to file  : 
-
 /*
 #include <iostream>
 #include <fstream>  // new  header file  
@@ -49,12 +48,10 @@ int main()
 #include <fstream>  // new  header file
 #include <string>  
 using namespace std;
-
 int main()
 {
     string  s1; 
     ifstream fout("prince.txt");
-
     if(!fout)
     {
         cout<<"file not found"<<endl;
