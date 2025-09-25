@@ -1,0 +1,11 @@
+			STATE BANK OF INDIA
+ACC.NO :729212390003                       DATE :25-09-2025 
+ACC.NAME :HARSHIL THAKKAR                      BRANCH :AHMEDABAD
+PAN :AWKPS3297A
+DATE/TIME           AMOUNT         DR             CR             BALANCE        
+9-25-2025          10000              0              0          10000
+9-25-2025         100000              0              0         110000
+9-25-2025              0          50000          60000
+9-25-2025              0           6000          54000
+9-25-2025              0          40000          14000
+9-25-2025              0              0          14000
