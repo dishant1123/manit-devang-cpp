@@ -4,7 +4,6 @@ encapsulation  :  using private  member  direct  access
 2. set : new value  set 
 
 */
-
 #include <iostream>
 using namespace std;
 class person 
