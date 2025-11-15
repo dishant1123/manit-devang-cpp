@@ -38,6 +38,7 @@ int main()
 */
 // read mode : 
 
+/*
 #include <iostream>
 #include <fstream>
 using namespace std;
@@ -59,4 +60,24 @@ int main()
     cout<<"file read successfully"<<endl;
     return 0;
     
+}
+    */
+
+// append mode :
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+    ofstream file("prince.txt",ios::app); 
+
+    file<<"my best friend name is  harshil"<<endl;
+    file<<"live in gandhinagar."<<endl;
+
+    file.close();
+    cout<<"file appended successfully"<<endl;
+    return 0;
+
 }
